@@ -80,7 +80,7 @@ export const MyComponent = () => {
             <div className="d-flex justify-content-end">
                 <Link to={'employee/'} className="btn btn-sm btn-success mr-4 bu"><FontAwesomeIcon icon={faPlus} /><FontAwesomeIcon icon={faUser} /></Link>
             </div><br></br>
-            <Form.Control type="text" {...register('search')} onChange={handleSearch} className="search" />
+            <Form.Control type="text" {...register('search')} placeholder="Search..." onChange={handleSearch} className="search" />
             <Table striped bordered hover responsive size="sm">
                 <thead>
                     <tr>
