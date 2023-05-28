@@ -5,8 +5,10 @@ import { Table, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash, faPlus, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Pagination } from './Paginations';
+import { useForm } from 'react-hook-form';
 
 export const MyComponent = () => {
+    const { register } = useForm();
     const navigate = useNavigate()
     const [items, setItems] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -78,7 +80,7 @@ export const MyComponent = () => {
             <div className="d-flex justify-content-end">
                 <Link to={'employee/'} className="btn btn-sm btn-success mr-4 bu"><FontAwesomeIcon icon={faPlus} /><FontAwesomeIcon icon={faUser} /></Link>
             </div><br></br>
-            <Form.Control type="text" placeholder="Search..." onChange={handleSearch} className="search" />
+            <Form.Control type="text" {...register('search')} onChange={handleSearch} className="search" />
             <Table striped bordered hover responsive size="sm">
                 <thead>
                     <tr>
