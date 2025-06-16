@@ -1,20 +1,21 @@
 {
   "products": [
     {
-      "empName": "mk",
+      "empName": "mio",
       "empEmail": "mk@gmail.com",
-      "password": "kkkkkkkkkkk",
+      "password": "kkkkkhj",
       "gender": "Female",
       "designation": "DBA",
       "technologies": [
+        "Java",
         "Python"
       ],
       "id": 2
     },
     {
-      "empName": "kaays",
+      "empName": "kevin",
       "empEmail": "kaay@gmail.com",
-      "password": "kkkkkkk",
+      "password": "kkkcxi",
       "gender": "Female",
       "designation": "QA",
       "technologies": [

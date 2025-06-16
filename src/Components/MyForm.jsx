@@ -14,7 +14,7 @@ export const MyForm = () => {
   const populateFormData = (data) => {
     setMode('update');
     Object.keys(data).forEach((key) => {
-      setValue(key, data[key]);
+      setValue(key, data[key], { shouldValidate: true });
     });
   };
 
@@ -99,7 +99,7 @@ export const MyForm = () => {
           </div>
         </div>
       </div>
-      <Button type="submit" disabled={!isDirty || !isValid} className='but'>{mode === 'insert' ? 'Add' : 'Update'}</Button>
+      <Button type="submit" disabled={mode === 'insert' ? !isDirty || !isValid : !isValid } className='but'>{mode === 'insert' ? 'Add' : 'Update'}</Button>
       <Button variant="secondary" onClick={() => cancel()} className='but'>Cancel</Button>
     </form>
   );

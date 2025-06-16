@@ -101,7 +101,7 @@ export const MyComponent = () => {
                             <td>{item.empEmail}</td>
                             <td>{item.gender}</td>
                             <td>{item.designation}</td>
-                            <td>{item.technologies}</td>
+                            <td>{item.technologies?.join(', ')}</td>
                             <td style={{ width: '80px' }}><button onClick={() => { deleteEmployee(item.id) }} className="btn btn-sm btn-danger mr-1"><FontAwesomeIcon icon={faTrash} /></button>
                                 <button onClick={() => handleEdit(item.id)} className="btn btn-sm btn-primary mr-1"><FontAwesomeIcon icon={faEdit} /></button></td>
                         </tr>
